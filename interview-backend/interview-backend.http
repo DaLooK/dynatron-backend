@@ -1,6 +1,6 @@
 @interview_backend_HostAddress = http://localhost:5267
 
-GET {{interview_backend_HostAddress}}/weatherforecast/
+GET {{interview_backend_HostAddress}}/customers/
 Accept: application/json
 
 ###

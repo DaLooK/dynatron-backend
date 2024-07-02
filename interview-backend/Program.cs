@@ -1,9 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace interview_backend;
 
 public class Program
 {
     public static void Main(string[] args)
     {
+        // Run migratons
+        using (var context = new CustomersContext())
+        {
+            context.Database.Migrate();
+        }
+        
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
