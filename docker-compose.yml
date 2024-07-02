@@ -1,0 +1,6 @@
+﻿services:
+  interview-backend:
+    image: interview-backend
+    build:
+      context: .
+      dockerfile: interview-backend/Dockerfile

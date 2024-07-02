@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interview-backend", "interview-backend\interview-backend.csproj", "{1168B2CC-8211-424A-A1E8-4B7289777D08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{966EF095-83B6-4B29-B1C7-95BBE5D7B925}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1168B2CC-8211-424A-A1E8-4B7289777D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1168B2CC-8211-424A-A1E8-4B7289777D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1168B2CC-8211-424A-A1E8-4B7289777D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1168B2CC-8211-424A-A1E8-4B7289777D08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
