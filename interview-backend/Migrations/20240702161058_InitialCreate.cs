@@ -27,6 +27,8 @@ namespace interview_backend.Migrations
                 {
                     table.PrimaryKey("PK_Customers", x => x.Id);
                 });
+            
+            
         }
 
         /// <inheritdoc />

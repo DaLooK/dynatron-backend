@@ -11,8 +11,21 @@ public class Program
         {
             context.Database.Migrate();
         }
+        var allowallPolicy = "_allowAllPolicy";
         
         var builder = WebApplication.CreateBuilder(args);
+        
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy(name: allowallPolicy,
+                builder =>
+                {
+                    builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+        });
 
         // Add services to the container.
 
@@ -31,7 +44,7 @@ public class Program
         }
 
         app.UseAuthorization();
-
+        app.UseCors(allowallPolicy);
 
         app.MapControllers();
 

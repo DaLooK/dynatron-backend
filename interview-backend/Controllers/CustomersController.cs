@@ -33,8 +33,8 @@ public class CustomersController : ControllerBase
         return result == 1 ? Created("", newCustomer) : Problem();
     }
 
-    [HttpPut("/:id")]
-    public IActionResult EditCustomer([FromQuery] int customerId, [FromBody] CustomerDto customerDto)
+    [HttpPut("{customerId}")]
+    public IActionResult EditCustomer([FromRoute] int customerId, [FromBody] CustomerDto customerDto)
     {
         var customer = _customersContext.Find<Customer>(customerId);
         if (customer == null)
@@ -44,11 +44,11 @@ public class CustomersController : ControllerBase
 
         customer.update(customerDto);
         var result = _customersContext.SaveChanges();
-        return result == 1 ? NoContent() : Problem();
+        return result == 1 ? Ok(customer) : Problem();
     }
 
-    [HttpDelete("/:id")]
-    public IActionResult DeleteCustomer([FromQuery] int customerId)
+    [HttpDelete("{customerId}")]
+    public IActionResult DeleteCustomer([FromRoute] int customerId)
     {
         var customer = _customersContext.Find<Customer>(customerId);
         if (customer == null)
